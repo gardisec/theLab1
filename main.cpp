@@ -36,10 +36,45 @@ void rectangle() //всё для прямоугольника
     cout << "Dioganal rectangle: " << diagonal(lenRect, widthRect) << "\n"; // Вывод диагонали
 }
 
+float perTriang(float side_1, float side_2, float side_3) { // Периметр треугольника
+    return (side_1 + side_2 + side_3);
+}
+
+float areaTriang(float side_1, float side_2, float side_3, float perimeter) // Площадь треугольника
+{
+    return sqrt((perimeter / 2) * (perimeter / 2 - side_1) * (perimeter / 2 - side_2) * (perimeter / 2 - side_3));
+}
+
+int isoTriang(float side_1, float side_2, float side_3) // Проверка треугольник на равнобедренность
+{
+    if ((side_1 == side_2) || (side_2 == side_3) || (side_1 == side_3)) return 1;
+    return 0;
+}
 
 void triangle() //всё для треугольника
 {
+    float firstSide, secondSide, thirdSide; // Стороны треугольника
+    cout << "Enter the sides of the triangle: \n";
+    cin >> firstSide >> secondSide >> thirdSide;
 
+    if (((firstSide + secondSide < thirdSide) || (firstSide + thirdSide < secondSide) || (secondSide + thirdSide < firstSide)) || (firstSide < 1 || secondSide < 1 || thirdSide < 1)) // Проверка параметров треугольника
+    {
+        cout << "There is no triangle with these sides" << endl;
+    }
+    else
+    {
+        float perimeter = perTriang(firstSide, secondSide, thirdSide);
+        cout << "Perimeter of triangle: " << perimeter << endl;
+        cout << "Area of Triangle: " << areaTriang(firstSide, secondSide, thirdSide, perimeter) << endl;
+        if (isoTriang(firstSide, secondSide, thirdSide) == 1)
+        {
+            cout << "This is an isosceles triangle";
+        }
+        else
+        {
+            cout << "This is not an isosceles triangle";
+        }
+    }
 }
 
 
@@ -59,7 +94,7 @@ float areaCircle(float rad, const float PI) //площадь круга
 
 float sectorAreaFind(float rad, float sector, const float PI) //площадь сектора круга
 {
-    float area = sector/360.0 * areaCircle(radius, PI)
+    float area = sector/360.0 * areaCircle(rad, PI);
     return area;
 }
 
@@ -104,9 +139,9 @@ int main()
         case('3'): // Круг
             circle();
             break;
-    }
+    
     default: // Ошибка при выборе несуществующей фигуры
         cout << "Please enter a valid number" << endl;
-}
-return 0;
+    }
+    return 0;
 }
