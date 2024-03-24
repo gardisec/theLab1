@@ -131,10 +131,10 @@ int main()
     cin >> figure;
     switch (figure) { // Выбор фигуры
         case('1'): // Прямоугольник:
-            triangle();
+            rectangle(); 
             break;
         case('2'): // Треугольник
-            rectangle();
+            triangle();
             break;
         case('3'): // Круг
             circle();
