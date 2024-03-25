@@ -27,7 +27,7 @@ void rectangle() //всё для прямоугольника
     cout << "Len rectangle: " ; // Ввод данных10
 
     cin >> lenRect;
-    cout <<  "\nWidth rectangle: ";
+    cout <<  "\nWidth rectangle: "; //123
     cin >> widthRect;
     cout << "\n";
 
