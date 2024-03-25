@@ -59,7 +59,7 @@ float areaCircle(float rad, const float PI) //площадь круга
 
 float sectorAreaFind(float rad, float sector, const float PI) //площадь сектора круга
 {
-    float area = sector/360.0 * areaCircle(radius, PI)
+    float area = sector/360.0 * areaCircle(rad, PI);
     return area;
 }
 
@@ -104,7 +104,6 @@ int main()
         case('3'): // Круг
             circle();
             break;
-    }
     default: // Ошибка при выборе несуществующей фигуры
         cout << "Please enter a valid number" << endl;
 }
