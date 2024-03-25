@@ -59,7 +59,7 @@ void triangle() //всё для треугольника
 
     if (((firstSide + secondSide < thirdSide) || (firstSide + thirdSide < secondSide) || (secondSide + thirdSide < firstSide)) || (firstSide < 1 || secondSide < 1 || thirdSide < 1)) // Проверка параметров треугольника
     {
-        cout << "There is no triangle with these sides" << endl;
+        cout << "There is no triangle with these sides" << endl; // Такого треугольника нет
     }
     else
     {
