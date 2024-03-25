@@ -23,7 +23,11 @@ float diagonal(float length, float width) // Вычисляет диагонал
 
 void rectangle() //всё для прямоугольника
 {
+<<<<<<< HEAD
     float lenRect, widthRect;
+=======
+    float lenRect, widthRect; //12321312
+>>>>>>> Maxim
     cout << "Len rectangle: " ; // Ввод данных10
 
     cin >> lenRect;
