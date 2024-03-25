@@ -19,7 +19,7 @@ float diagonal(float length, float width) // Вычисляет диагонал
 
 int main()
 {
-    float lenRect, widthRect; 
+    float lenRect, widthRect; //12321312
     cout << "Len rectangle: " ; // Ввод данных10
 
     cin >> lenRect;
