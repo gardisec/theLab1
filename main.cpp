@@ -45,14 +45,14 @@ void triangle() //всё для треугольника
 
 float circumferenceFind(float rad, const float PI) //длина окружности
 {
-    float circumference = rad * PI;
+    float circumference = 2 * rad * PI;
     return circumference;
 }
 
 
 float areaCircle(float rad, const float PI) //площадь круга
 {
-    float area = rad * rad * PI;
+    float area = rad * rad * PI;    
     return area;
 }
 
