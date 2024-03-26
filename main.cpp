@@ -67,7 +67,7 @@ void triangle() //всё для треугольника
     else
     {
         float perimeter = perTriang(firstSide, secondSide, thirdSide);
-        cout << "Perimeter of triangle: " << perimeter << endl;
+        cout << "Perimeter of triangle: " << perimeter << endl; // aveaveavtf
         cout << "Area of Triangle: " << areaTriang(firstSide, secondSide, thirdSide, perimeter) << endl;
         if (isoTriang(firstSide, secondSide, thirdSide) == 1)
         {
